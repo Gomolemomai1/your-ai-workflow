@@ -68,11 +68,11 @@ function PlannerPage() {
         ]}
         buildPrompt={(v) =>
           [
-            `Create an execution plan for this goal:\n${v.goal}`,
-            `Timeframe: ${v.deadline || "not specified"}`,
-            `Capacity: ${v.capacity || "not specified"}`,
-            `Prioritise using: ${v.framework || "MoSCoW"}`,
-            `Constraints: ${v.constraints || "none given"}`,
+            `Create an execution plan for this goal:\n${v["goal"]}`,
+            `Timeframe: ${v["deadline"] || "not specified"}`,
+            `Capacity: ${v["capacity"] || "not specified"}`,
+            `Prioritise using: ${v["framework"] || "MoSCoW"}`,
+            `Constraints: ${v["constraints"] || "none given"}`,
             "Return: Objective, Milestones with dates, Task breakdown (`Priority — task — owner — estimate — dependency`), Weekly schedule, Risks & mitigations, Assumptions.",
           ].join("\n\n")
         }

@@ -61,10 +61,10 @@ function ResearchPage() {
         ]}
         buildPrompt={(v) =>
           [
-            `Research topic: ${v.topic}`,
-            `Depth: ${v.depth || "Executive brief"}`,
-            `Focus angle: ${v.angle || "balanced overview"}`,
-            `Audience: ${v.audience || "business professionals"}`,
+            `Research topic: ${v["topic"]}`,
+            `Depth: ${v["depth"] || "Executive brief"}`,
+            `Focus angle: ${v["angle"] || "balanced overview"}`,
+            `Audience: ${v["audience"] || "business professionals"}`,
             "Return: Executive summary, Key findings (with confidence: high/medium/low), Different perspectives, Risks & caveats, Recommended next steps, What to verify independently.",
           ].join("\n\n")
         }

@@ -62,9 +62,9 @@ function NotesPage() {
         ]}
         buildPrompt={(v) =>
           [
-            `Summarise the following ${v.meeting || "meeting"} notes${v.audience ? ` for: ${v.audience}` : ""}.`,
+            `Summarise the following ${v["meeting"] || "meeting"} notes${v["audience"] ? ` for: ${v["audience"]}` : ""}.`,
             "Return these sections with markdown headings: Summary (3 bullets), Key decisions, Action items (table-style lines of `Owner — task — due date`), Risks & blockers, Open questions.",
-            `Notes:\n${v.notes}`,
+            `Notes:\n${v["notes"]}`,
           ].join("\n\n")
         }
         submitLabel="Summarize notes"

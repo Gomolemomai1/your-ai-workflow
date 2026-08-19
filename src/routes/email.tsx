@@ -64,10 +64,10 @@ function EmailPage() {
         buildPrompt={(v) =>
           [
             "Write a workplace email.",
-            `Recipient: ${v.recipient}`,
-            `Tone: ${v.tone || "Professional"}`,
-            `Length: ${v.length || "Short"}`,
-            `Purpose and key points:\n${v.purpose}`,
+            `Recipient: ${v["recipient"]}`,
+            `Tone: ${v["tone"] || "Professional"}`,
+            `Length: ${v["length"] || "Short"}`,
+            `Purpose and key points:\n${v["purpose"]}`,
             "Format the response as:\nSubject: <subject>\n\n<email body>\n\nSuggested follow-ups:\n- ...",
           ].join("\n\n")
         }
