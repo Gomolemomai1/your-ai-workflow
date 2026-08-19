@@ -110,7 +110,7 @@ export function AiTool({
               />
             )}
             {field.type === "select" && (
-              <Select value={values[field.name]} onValueChange={(v) => set(field.name, v)}>
+              <Select value={values[field.name] ?? ""} onValueChange={(v) => set(field.name, v)}>
                 <SelectTrigger id={field.name}>
                   <SelectValue placeholder={field.placeholder ?? "Select"} />
                 </SelectTrigger>
